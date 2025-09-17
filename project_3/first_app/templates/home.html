@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is home page0202</h1>
+    <h3>Author : {{ author }}</h3>
+    <h3>Age : {{ age }}</h3>
+
+    <!-- Display List -->
+    <h3>List Items:</h3>
+    <ul>
+      {% for item in lst %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <!-- Conditional Statement -->
+    {% if age >= 20 %}
+    <h4>U r bal pakna</h4>
+    {% elif age >= 10 and age <= 19 %}
+    <h4>U r still young</h4>
+    {% else %}
+    <h4>U r baccha</h4>
+    {% endif %}
+
+    {{lst}} <br>
+    {{lst | join:"  "}}
+
+    <!-- Courses Loop -->
+    <h3>Courses:</h3>
+    <ul>
+      {% for i in courses %}
+      <li>ID: {{ i.id }} | Name: {{ i.name }} | Fee: {{ i.fee }}</li>
+      {% endfor %}
+
+
+    </ul>
+  </body>
+</html>
